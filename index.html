@@ -1,153 +1,235 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dabo Ph — Fotografía & Video</title>
-<meta name="description" content="Portfolio de Dabo Ph. Fotografía y video: retratos, bodas, editorial, comercial y producción audiovisual.">
+<title>Dabo Ph — Photography &amp; Videography, Doha, Qatar</title>
+<meta name="description" content="Dabo Ph is a photography and videography studio based in Doha, Qatar — portraits, live music, maternity, lifestyle and commercial work.">
+<meta name="keywords" content="Dabo Ph, Dabo Ph Photography, photographer in Doha, photographer Qatar, videographer Doha, photography Qatar">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- textura de grano de película -->
-<div class="grain" aria-hidden="true"></div>
-
 <!-- ============ NAV ============ -->
 <header class="nav" id="top">
   <a href="#top" class="nav__mark">
-    <img src="img/logo.png" alt="Dabo Ph" class="nav__mark-img">
+    <img src="logo.png" alt="Dabo Ph" class="nav__mark-img">
   </a>
-  <nav class="nav__links">
-    <a href="#trabajo">Trabajo</a>
-    <a href="#sobre-mi">Sobre mí</a>
-    <a href="#contacto">Contacto</a>
+  <nav class="nav__links" id="navLinks">
+    <a href="#top">Home</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
   </nav>
-  <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+  <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
     <span></span><span></span>
   </button>
 </header>
 
 <!-- ============ HERO ============ -->
 <section class="hero">
-  <p class="hero__eyebrow mono">Fotografía — Video — Doha, QA</p>
-  <h1 class="hero__title">
-    <img src="img/logo.png" alt="Dabo Ph" class="hero__logo">
-  </h1>
-  <p class="hero__sub">
-    Cuento historias con luz y movimiento. Retratos, bodas, editorial
-    y producción audiovisual, revelados con cuidado.
-  </p>
-  <a href="#trabajo" class="hero__scroll">
-    <span class="mono">Ver trabajo</span>
+  <div class="ph hero__ph">
+    <span class="ph__label">Hero image placeholder<br>2400 × 1500px recommended</span>
+  </div>
+  <div class="hero__overlay">
+    <h1 class="hero__title">DABO PH</h1>
+    <p class="hero__tagline">Photography&nbsp;·&nbsp;Videography</p>
+  </div>
+  <a href="#portfolio" class="hero__scroll" aria-label="Scroll to portfolio">
     <span class="hero__scroll-line"></span>
   </a>
 </section>
 
-<!-- ============ TIRA DE NEGATIVOS (categorías) ============ -->
-<main id="trabajo">
+<!-- ============ PORTFOLIO ============ -->
+<main id="portfolio">
+  <div class="section-head">
+    <span class="eyebrow">— Portfolio</span>
+    <h2>Selected Work</h2>
+  </div>
 
-  <section class="frame" data-frame="F-01">
-    <div class="frame__media">
-      <img src="https://picsum.photos/seed/retratos/1000/1250" alt="Retrato en blanco y negro, ejemplo del portafolio" loading="lazy">
-      <span class="frame__sprockets" aria-hidden="true"></span>
+  <!-- ARTIST / STUDIO PORTRAITS -->
+  <section class="category" aria-label="Artist and studio portraits gallery">
+    <div class="category__head">
+      <h3>Artist Portraits</h3>
+      <span class="category__count mono">01 — 05</span>
     </div>
-    <div class="frame__info">
-      <span class="frame__index mono">F-01</span>
-      <h2>Retratos</h2>
-      <p>Sesiones íntimas y editoriales, en estudio o luz natural.
-         Un retrato honesto, sin poses forzadas.</p>
-      <a href="#" class="frame__link">Ver galería →</a>
+    <div class="gallery" data-gallery>
+      <div class="gallery__track">
+        <div class="ph gallery__item"><span class="ph__label">01</span></div>
+        <div class="ph gallery__item"><span class="ph__label">02</span></div>
+        <div class="ph gallery__item"><span class="ph__label">03</span></div>
+        <div class="ph gallery__item"><span class="ph__label">04</span></div>
+        <div class="ph gallery__item"><span class="ph__label">05</span></div>
+      </div>
+      <button class="gallery__nav gallery__nav--prev" aria-label="Scroll left">‹</button>
+      <button class="gallery__nav gallery__nav--next" aria-label="Scroll right">›</button>
     </div>
   </section>
 
-  <section class="frame frame--reverse" data-frame="F-02">
-    <div class="frame__media">
-      <img src="https://picsum.photos/seed/bodas/1000/1250" alt="Fotografía de boda, ejemplo del portafolio" loading="lazy">
-      <span class="frame__sprockets" aria-hidden="true"></span>
+  <!-- LIVE BAND -->
+  <section class="category" aria-label="Live band photography gallery">
+    <div class="category__head">
+      <h3>Live Band</h3>
+      <span class="category__count mono">01 — 05</span>
     </div>
-    <div class="frame__info">
-      <span class="frame__index mono">F-02</span>
-      <h2>Bodas &amp; Eventos</h2>
-      <p>Cobertura discreta de principio a fin. Los momentos reales,
-         no las poses de cámara.</p>
-      <a href="#" class="frame__link">Ver galería →</a>
-    </div>
-  </section>
-
-  <section class="frame" data-frame="F-03">
-    <div class="frame__media">
-      <img src="https://picsum.photos/seed/editorial/1000/1250" alt="Fotografía editorial y de moda, ejemplo del portafolio" loading="lazy">
-      <span class="frame__sprockets" aria-hidden="true"></span>
-    </div>
-    <div class="frame__info">
-      <span class="frame__index mono">F-03</span>
-      <h2>Editorial &amp; Moda</h2>
-      <p>Producciones con dirección de arte propia, para marcas y
-         publicaciones que buscan una mirada particular.</p>
-      <a href="#" class="frame__link">Ver galería →</a>
+    <div class="gallery" data-gallery>
+      <div class="gallery__track">
+        <div class="ph gallery__item"><span class="ph__label">01</span></div>
+        <div class="ph gallery__item"><span class="ph__label">02</span></div>
+        <div class="ph gallery__item"><span class="ph__label">03</span></div>
+        <div class="ph gallery__item"><span class="ph__label">04</span></div>
+        <div class="ph gallery__item"><span class="ph__label">05</span></div>
+      </div>
+      <button class="gallery__nav gallery__nav--prev" aria-label="Scroll left">‹</button>
+      <button class="gallery__nav gallery__nav--next" aria-label="Scroll right">›</button>
     </div>
   </section>
 
-  <section class="frame frame--reverse" data-frame="F-04">
-    <div class="frame__media">
-      <img src="https://picsum.photos/seed/comercial/1000/1250" alt="Fotografía comercial y de producto, ejemplo del portafolio" loading="lazy">
-      <span class="frame__sprockets" aria-hidden="true"></span>
+  <!-- PREGNANCY / MATERNITY -->
+  <section class="category" aria-label="Maternity photography gallery">
+    <div class="category__head">
+      <h3>Maternity</h3>
+      <span class="category__count mono">01 — 05</span>
     </div>
-    <div class="frame__info">
-      <span class="frame__index mono">F-04</span>
-      <h2>Comercial &amp; Producto</h2>
-      <p>Imágenes de producto y campaña pensadas para vender:
-         limpias, precisas, listas para catálogo o redes.</p>
-      <a href="#" class="frame__link">Ver galería →</a>
-    </div>
-  </section>
-
-  <section class="frame" data-frame="F-05">
-    <div class="frame__media frame__media--video">
-      <img src="https://picsum.photos/seed/video/1000/1250" alt="Producción de video, ejemplo del portafolio" loading="lazy">
-      <span class="frame__play" aria-hidden="true">▶</span>
-      <span class="frame__sprockets" aria-hidden="true"></span>
-    </div>
-    <div class="frame__info">
-      <span class="frame__index mono">F-05</span>
-      <h2>Video</h2>
-      <p>Documentales cortos, video de marca y cobertura de eventos.
-         Del guion al montaje final.</p>
-      <a href="#" class="frame__link">Ver reel →</a>
+    <div class="gallery" data-gallery>
+      <div class="gallery__track">
+        <div class="ph gallery__item"><span class="ph__label">01</span></div>
+        <div class="ph gallery__item"><span class="ph__label">02</span></div>
+        <div class="ph gallery__item"><span class="ph__label">03</span></div>
+        <div class="ph gallery__item"><span class="ph__label">04</span></div>
+        <div class="ph gallery__item"><span class="ph__label">05</span></div>
+      </div>
+      <button class="gallery__nav gallery__nav--prev" aria-label="Scroll left">‹</button>
+      <button class="gallery__nav gallery__nav--next" aria-label="Scroll right">›</button>
     </div>
   </section>
 
+  <!-- LIFESTYLE -->
+  <section class="category" aria-label="Lifestyle photography gallery">
+    <div class="category__head">
+      <h3>Lifestyle</h3>
+      <span class="category__count mono">01 — 05</span>
+    </div>
+    <div class="gallery" data-gallery>
+      <div class="gallery__track">
+        <div class="ph gallery__item"><span class="ph__label">01</span></div>
+        <div class="ph gallery__item"><span class="ph__label">02</span></div>
+        <div class="ph gallery__item"><span class="ph__label">03</span></div>
+        <div class="ph gallery__item"><span class="ph__label">04</span></div>
+        <div class="ph gallery__item"><span class="ph__label">05</span></div>
+      </div>
+      <button class="gallery__nav gallery__nav--prev" aria-label="Scroll left">‹</button>
+      <button class="gallery__nav gallery__nav--next" aria-label="Scroll right">›</button>
+    </div>
+  </section>
+
+  <!-- COMMERCIAL & CORPORATE -->
+  <section class="category" aria-label="Commercial and corporate photography gallery">
+    <div class="category__head">
+      <h3>Commercial &amp; Corporate</h3>
+      <span class="category__count mono">01 — 05</span>
+    </div>
+    <div class="gallery" data-gallery>
+      <div class="gallery__track">
+        <div class="ph gallery__item"><span class="ph__label">01</span></div>
+        <div class="ph gallery__item"><span class="ph__label">02</span></div>
+        <div class="ph gallery__item"><span class="ph__label">03</span></div>
+        <div class="ph gallery__item"><span class="ph__label">04</span></div>
+        <div class="ph gallery__item"><span class="ph__label">05</span></div>
+      </div>
+      <button class="gallery__nav gallery__nav--prev" aria-label="Scroll left">‹</button>
+      <button class="gallery__nav gallery__nav--next" aria-label="Scroll right">›</button>
+    </div>
+  </section>
 </main>
 
-<!-- ============ SOBRE MÍ ============ -->
-<section class="about" id="sobre-mi">
-  <div class="about__inner">
-    <span class="mono about__index">— Bio</span>
-    <h2>Sobre mí</h2>
-    <p>
-      Soy fotógrafo y videógrafo con base en Doha. Trabajo entre la
-      cámara fija y la cámara en movimiento, buscando siempre la misma
-      cosa: un instante honesto. Esto es un texto de ejemplo — cuéntame
-      tu historia real y lo reemplazamos.
-    </p>
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="ph about__ph">
+    <span class="ph__label">Portrait placeholder</span>
+  </div>
+  <div class="about__copy">
+    <span class="eyebrow">— About</span>
+    <h2>Dabo Ph</h2>
+    <p class="placeholder-text">[ Your biography will go here. A short, personal paragraph about who you are, your approach to photography and video, and what drives your work. ]</p>
   </div>
 </section>
 
-<!-- ============ CONTACTO ============ -->
-<footer class="contact" id="contacto">
-  <h2>Trabajemos juntos</h2>
-  <a class="contact__email" href="mailto:hola@tudominio.com">hola@tudominio.com</a>
-  <div class="contact__social mono">
-    <a href="#">Instagram</a>
-    <a href="#">WhatsApp</a>
-    <a href="#">LinkedIn</a>
+<!-- ============ SERVICES ============ -->
+<section class="services" id="services">
+  <div class="section-head">
+    <span class="eyebrow">— Services</span>
+    <h2>What I Do</h2>
   </div>
-  <p class="contact__copy mono">© <span id="year"></span> Dabo Ph. Todos los derechos reservados.</p>
+  <ul class="services__list">
+    <li>
+      <h3>Photography</h3>
+      <p class="placeholder-text">Portraits, events, commercial photography.</p>
+    </li>
+    <li>
+      <h3>Videography</h3>
+      <p class="placeholder-text">[ Short description of your video services. ]</p>
+    </li>
+    <li>
+      <h3>Content Creation</h3>
+      <p class="placeholder-text">[ Short description of your content creation services. ]</p>
+    </li>
+  </ul>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="section-head">
+    <span class="eyebrow">— Contact</span>
+    <h2>Let's Work Together</h2>
+  </div>
+
+  <div class="contact__grid">
+    <div class="contact__details">
+      <a href="mailto:hello@example.com" class="contact__line">
+        <span class="mono">Email</span>
+        <span>[ your@email.com ]</span>
+      </a>
+      <a href="#" class="contact__line">
+        <span class="mono">Instagram</span>
+        <span>[ @yourhandle ]</span>
+      </a>
+      <a href="#" class="contact__line">
+        <span class="mono">WhatsApp</span>
+        <span>[ +974 ... ]</span>
+      </a>
+    </div>
+
+    <form class="contact__form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="text" name="company" placeholder="Company (optional)">
+      <select name="project_type" defaultValue="">
+        <option value="" disabled selected>Type of project</option>
+        <option>Portrait</option>
+        <option>Live Band</option>
+        <option>Maternity</option>
+        <option>Lifestyle</option>
+        <option>Commercial / Corporate</option>
+        <option>Video</option>
+        <option>Other</option>
+      </select>
+      <textarea name="message" placeholder="Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <a href="#" class="footer__instagram mono">Instagram</a>
+  <p class="footer__copy mono">© <span id="year"></span> Dabo Ph — Doha, Qatar</p>
 </footer>
 
 <script src="script.js"></script>
