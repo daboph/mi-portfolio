@@ -1,6 +1,20 @@
 // Footer year
 document.getElementById("year").textContent = new Date().getFullYear();
 
+// Show nav logo only after scrolling past the hero
+const heroSection = document.querySelector(".hero");
+const navMark = document.getElementById("navMark");
+
+if (heroSection && navMark && "IntersectionObserver" in window) {
+  const heroObserver = new IntersectionObserver(
+    ([entry]) => {
+      navMark.classList.toggle("is-visible", !entry.isIntersecting);
+    },
+    { threshold: 0 }
+  );
+  heroObserver.observe(heroSection);
+}
+
 // Mobile menu toggle
 const navToggle = document.getElementById("navToggle");
 const navLinks = document.getElementById("navLinks");

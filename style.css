@@ -77,7 +77,12 @@ h1,h2,h3{ font-family:var(--display); font-weight:400; letter-spacing:-.01em; }
   display:flex; align-items:center; justify-content:space-between;
   padding:1.4rem var(--gutter);
 }
-.nav__mark{ display:flex; align-items:center; }
+.nav__mark{
+  display:flex; align-items:center;
+  opacity:0; pointer-events:none;
+  transition:opacity .35s ease;
+}
+.nav__mark.is-visible{ opacity:1; pointer-events:auto; }
 .nav__mark-img{ height:38px; width:auto; display:block; }
 
 .nav__links{ display:flex; gap:2.25rem; font-size:.72rem;
@@ -105,17 +110,16 @@ h1,h2,h3{ font-family:var(--display); font-weight:400; letter-spacing:-.01em; }
 /* ============================================
    HERO
    ============================================ */
-.hero{ position:relative; height:100svh; overflow:hidden; }
+.hero{ position:relative; height:clamp(320px, 34vh, 460px); overflow:hidden; }
 .hero__ph{ position:absolute; inset:0; }
 .hero__overlay{
   position:absolute; inset:0; z-index:2;
-  display:flex; flex-direction:column; align-items:center; justify-content:flex-start;
-  padding-top:clamp(6rem, 15vh, 9.5rem);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
   text-align:center;
   background:radial-gradient(ellipse at center, rgba(10,10,11,.15) 0%, rgba(10,10,11,.55) 100%);
 }
 .hero__logo{
-  width:clamp(130px, 16vw, 210px);
+  width:clamp(162px, 20vw, 262px);
   height:auto;
   display:block;
 }
