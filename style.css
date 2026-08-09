@@ -110,12 +110,13 @@ h1,h2,h3{ font-family:var(--display); font-weight:400; letter-spacing:-.01em; }
 /* ============================================
    HERO
    ============================================ */
-.hero{ position:relative; height:clamp(320px, 34vh, 460px); overflow:hidden; }
+.hero{ position:relative; overflow:hidden; }
 .hero__ph{ position:absolute; inset:0; }
 .hero__overlay{
-  position:absolute; inset:0; z-index:2;
+  position:relative; z-index:2;
   display:flex; flex-direction:column; align-items:center; justify-content:center;
   text-align:center;
+  padding:2.5rem 1.5rem;
   background:radial-gradient(ellipse at center, rgba(10,10,11,.15) 0%, rgba(10,10,11,.55) 100%);
 }
 .hero__logo{
@@ -141,6 +142,8 @@ h1,h2,h3{ font-family:var(--display); font-weight:400; letter-spacing:-.01em; }
 /* ============================================
    PORTFOLIO CATEGORIES
    ============================================ */
+main{ padding-top:clamp(2.5rem, 6vw, 4rem); }
+
 .category{
   padding:2.25rem 0;
   opacity:0; transform:translateY(20px);
