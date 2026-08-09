@@ -78,7 +78,7 @@ h1,h2,h3{ font-family:var(--display); font-weight:400; letter-spacing:-.01em; }
   padding:1.4rem var(--gutter);
 }
 .nav__mark{ display:flex; align-items:center; }
-.nav__mark-img{ height:28px; width:auto; display:block; }
+.nav__mark-img{ height:38px; width:auto; display:block; }
 
 .nav__links{ display:flex; gap:2.25rem; font-size:.72rem;
   letter-spacing:.1em; text-transform:uppercase; }
@@ -109,16 +109,18 @@ h1,h2,h3{ font-family:var(--display); font-weight:400; letter-spacing:-.01em; }
 .hero__ph{ position:absolute; inset:0; }
 .hero__overlay{
   position:absolute; inset:0; z-index:2;
-  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  display:flex; flex-direction:column; align-items:center; justify-content:flex-start;
+  padding-top:clamp(6rem, 15vh, 9.5rem);
   text-align:center;
   background:radial-gradient(ellipse at center, rgba(10,10,11,.15) 0%, rgba(10,10,11,.55) 100%);
 }
-.hero__title{
-  font-size:clamp(3rem, 11vw, 8rem);
-  letter-spacing:.02em;
+.hero__logo{
+  width:clamp(130px, 16vw, 210px);
+  height:auto;
+  display:block;
 }
 .hero__tagline{
-  margin-top:1rem;
+  margin-top:.85rem;
   font-size:.78rem; letter-spacing:.28em; text-transform:uppercase;
   color:var(--ink-dim);
 }
