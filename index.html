@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dabo Ph — Fotografía & Video</title>
+<meta name="description" content="Portfolio de Dabo Ph. Fotografía y video: retratos, bodas, editorial, comercial y producción audiovisual.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- textura de grano de película -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="top">
+  <a href="#top" class="nav__mark">
+    <img src="img/logo.png" alt="Dabo Ph" class="nav__mark-img">
+  </a>
+  <nav class="nav__links">
+    <a href="#trabajo">Trabajo</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <p class="hero__eyebrow mono">Fotografía — Video — Doha, QA</p>
+  <h1 class="hero__title">
+    <img src="img/logo.png" alt="Dabo Ph" class="hero__logo">
+  </h1>
+  <p class="hero__sub">
+    Cuento historias con luz y movimiento. Retratos, bodas, editorial
+    y producción audiovisual, revelados con cuidado.
+  </p>
+  <a href="#trabajo" class="hero__scroll">
+    <span class="mono">Ver trabajo</span>
+    <span class="hero__scroll-line"></span>
+  </a>
+</section>
+
+<!-- ============ TIRA DE NEGATIVOS (categorías) ============ -->
+<main id="trabajo">
+
+  <section class="frame" data-frame="F-01">
+    <div class="frame__media">
+      <img src="https://picsum.photos/seed/retratos/1000/1250" alt="Retrato en blanco y negro, ejemplo del portafolio" loading="lazy">
+      <span class="frame__sprockets" aria-hidden="true"></span>
+    </div>
+    <div class="frame__info">
+      <span class="frame__index mono">F-01</span>
+      <h2>Retratos</h2>
+      <p>Sesiones íntimas y editoriales, en estudio o luz natural.
+         Un retrato honesto, sin poses forzadas.</p>
+      <a href="#" class="frame__link">Ver galería →</a>
+    </div>
+  </section>
+
+  <section class="frame frame--reverse" data-frame="F-02">
+    <div class="frame__media">
+      <img src="https://picsum.photos/seed/bodas/1000/1250" alt="Fotografía de boda, ejemplo del portafolio" loading="lazy">
+      <span class="frame__sprockets" aria-hidden="true"></span>
+    </div>
+    <div class="frame__info">
+      <span class="frame__index mono">F-02</span>
+      <h2>Bodas &amp; Eventos</h2>
+      <p>Cobertura discreta de principio a fin. Los momentos reales,
+         no las poses de cámara.</p>
+      <a href="#" class="frame__link">Ver galería →</a>
+    </div>
+  </section>
+
+  <section class="frame" data-frame="F-03">
+    <div class="frame__media">
+      <img src="https://picsum.photos/seed/editorial/1000/1250" alt="Fotografía editorial y de moda, ejemplo del portafolio" loading="lazy">
+      <span class="frame__sprockets" aria-hidden="true"></span>
+    </div>
+    <div class="frame__info">
+      <span class="frame__index mono">F-03</span>
+      <h2>Editorial &amp; Moda</h2>
+      <p>Producciones con dirección de arte propia, para marcas y
+         publicaciones que buscan una mirada particular.</p>
+      <a href="#" class="frame__link">Ver galería →</a>
+    </div>
+  </section>
+
+  <section class="frame frame--reverse" data-frame="F-04">
+    <div class="frame__media">
+      <img src="https://picsum.photos/seed/comercial/1000/1250" alt="Fotografía comercial y de producto, ejemplo del portafolio" loading="lazy">
+      <span class="frame__sprockets" aria-hidden="true"></span>
+    </div>
+    <div class="frame__info">
+      <span class="frame__index mono">F-04</span>
+      <h2>Comercial &amp; Producto</h2>
+      <p>Imágenes de producto y campaña pensadas para vender:
+         limpias, precisas, listas para catálogo o redes.</p>
+      <a href="#" class="frame__link">Ver galería →</a>
+    </div>
+  </section>
+
+  <section class="frame" data-frame="F-05">
+    <div class="frame__media frame__media--video">
+      <img src="https://picsum.photos/seed/video/1000/1250" alt="Producción de video, ejemplo del portafolio" loading="lazy">
+      <span class="frame__play" aria-hidden="true">▶</span>
+      <span class="frame__sprockets" aria-hidden="true"></span>
+    </div>
+    <div class="frame__info">
+      <span class="frame__index mono">F-05</span>
+      <h2>Video</h2>
+      <p>Documentales cortos, video de marca y cobertura de eventos.
+         Del guion al montaje final.</p>
+      <a href="#" class="frame__link">Ver reel →</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ SOBRE MÍ ============ -->
+<section class="about" id="sobre-mi">
+  <div class="about__inner">
+    <span class="mono about__index">— Bio</span>
+    <h2>Sobre mí</h2>
+    <p>
+      Soy fotógrafo y videógrafo con base en Doha. Trabajo entre la
+      cámara fija y la cámara en movimiento, buscando siempre la misma
+      cosa: un instante honesto. Esto es un texto de ejemplo — cuéntame
+      tu historia real y lo reemplazamos.
+    </p>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<footer class="contact" id="contacto">
+  <h2>Trabajemos juntos</h2>
+  <a class="contact__email" href="mailto:hola@tudominio.com">hola@tudominio.com</a>
+  <div class="contact__social mono">
+    <a href="#">Instagram</a>
+    <a href="#">WhatsApp</a>
+    <a href="#">LinkedIn</a>
+  </div>
+  <p class="contact__copy mono">© <span id="year"></span> Dabo Ph. Todos los derechos reservados.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
