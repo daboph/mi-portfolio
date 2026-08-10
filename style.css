@@ -76,17 +76,13 @@ h1,h2,h3{ font-family:var(--display); font-weight:400; letter-spacing:-.01em; }
   position:fixed; top:0; left:0; right:0; z-index:200;
   display:flex; align-items:center; justify-content:space-between;
   padding:1.4rem var(--gutter);
-  background-color:transparent;
-  transition:background-color .4s ease;
+  background-color:var(--bg-alt);
+  transform:translateY(-100%);
+  transition:transform .4s ease;
 }
-.nav.is-scrolled{ background-color:var(--bg); }
+.nav.is-scrolled{ transform:translateY(0); }
 
-.nav__mark{
-  display:flex; align-items:center;
-  opacity:0; pointer-events:none;
-  transition:opacity .35s ease;
-}
-.nav.is-scrolled .nav__mark{ opacity:1; pointer-events:auto; }
+.nav__mark{ display:flex; align-items:center; }
 .nav__mark-img{ height:38px; width:auto; display:block; }
 
 .nav__links{ display:flex; gap:2.25rem; font-size:.72rem;
