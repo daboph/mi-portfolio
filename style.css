@@ -116,11 +116,11 @@ h1,h2,h3{ font-family:var(--display); font-weight:400; letter-spacing:-.01em; }
   position:relative; z-index:2;
   display:flex; flex-direction:column; align-items:center; justify-content:center;
   text-align:center;
-  padding:2.5rem 1.5rem;
+  padding:clamp(5.5rem, 12vh, 7rem) 1.8rem 3rem;
   background:radial-gradient(ellipse at center, rgba(10,10,11,.15) 0%, rgba(10,10,11,.55) 100%);
 }
 .hero__logo{
-  width:clamp(162px, 20vw, 262px);
+  width:clamp(194px, 24vw, 314px);
   height:auto;
   display:block;
 }
