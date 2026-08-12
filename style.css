@@ -142,10 +142,11 @@ h1,h2,h3{ font-family:var(--display); font-weight:400; letter-spacing:-.01em; }
 /* ============================================
    PORTFOLIO CATEGORIES
    ============================================ */
-main{ padding-top:clamp(2.5rem, 6vw, 4rem); }
+main{ padding-top:clamp(2.5rem, 6vw, 4rem); counter-reset: cat; }
+.portfolio-label{ padding:0 var(--gutter); margin-bottom:0; }
 
 .category{
-  padding:2.25rem 0;
+  padding:clamp(3rem, 7vw, 5.5rem) 0;
   opacity:0; transform:translateY(20px);
   transition:opacity .7s ease, transform .7s ease;
 }
@@ -156,6 +157,14 @@ main{ padding-top:clamp(2.5rem, 6vw, 4rem); }
   padding:0 var(--gutter); margin-bottom:1.25rem;
 }
 .category__head h3{ font-size:clamp(1.4rem,2.6vw,1.9rem); }
+.category__head h3::before{
+  counter-increment: cat;
+  content: counter(cat, upper-roman) "  ";
+  font-style:italic;
+  font-size:.62em;
+  color:var(--ink-dim);
+  margin-right:.4rem;
+}
 
 .gallery{ position:relative; }
 .gallery__track{
