@@ -93,24 +93,16 @@ h1,h2,h3{ font-family:var(--display); font-weight:400; letter-spacing:-.01em; }
 }
 
 /* ============================================
-   HERO (Sección compacta tipo banner con logo original)
+   HERO
    ============================================ */
-.hero{ 
-  position:relative; 
-  overflow:hidden; 
-  min-height:45vh; 
-  height:45vh; 
-  display:flex; 
-  align-items:center; 
-  justify-content:center; 
-}
-.hero__ph{ position:absolute; inset:0; background:var(--bg-alt); }
-.hero__img-bg{ width:100%; height:100%; object-fit:cover; opacity:.4; }
+.hero{ position:relative; overflow:hidden; }
+.hero__ph{ position:absolute; inset:0; }
 .hero__overlay{
   position:relative; z-index:2;
   display:flex; flex-direction:column; align-items:center; justify-content:center;
   text-align:center;
-  padding:2rem 1.8rem;
+  padding:clamp(4rem, 12vh, 4rem) 1.8rem 3rem;
+  background:radial-gradient(ellipse at center, rgba(10,10,11,.15) 0%, rgba(10,10,11,.55) 100%);
 }
 .hero__logo{
   width:clamp(194px, 24vw, 314px);
@@ -123,9 +115,9 @@ h1,h2,h3{ font-family:var(--display); font-weight:400; letter-spacing:-.01em; }
   color:var(--ink-dim);
 }
 .hero__scroll{
-  position:absolute; bottom:1.25rem; left:50%; transform:translateX(-50%); z-index:2;
+  position:absolute; bottom:2.25rem; left:50%; transform:translateX(-50%); z-index:2;
 }
-.hero__scroll-line{ display:block; width:1px; height:2rem; background:var(--ink-dim); position:relative; overflow:hidden; }
+.hero__scroll-line{ display:block; width:1px; height:2.75rem; background:var(--ink-dim); position:relative; overflow:hidden; }
 .hero__scroll-line::after{
   content:""; position:absolute; top:-100%; left:0; width:100%; height:100%;
   background:var(--ink); animation:scrollpulse 2.4s ease-in-out infinite;
