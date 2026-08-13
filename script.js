@@ -19,17 +19,19 @@ if (heroSection && siteNav && "IntersectionObserver" in window) {
 const navToggle = document.getElementById("navToggle");
 const navLinks = document.getElementById("navLinks");
 
-navToggle.addEventListener("click", () => {
-  const isOpen = navLinks.classList.toggle("is-open");
-  navToggle.setAttribute("aria-expanded", isOpen);
-});
-
-navLinks.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("is-open");
-    navToggle.setAttribute("aria-expanded", "false");
+if (navToggle && navLinks) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", isOpen);
   });
-});
+
+  navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+}
 
 // Reveal each portfolio category on scroll
 const categories = document.querySelectorAll(".category");
@@ -56,12 +58,15 @@ document.querySelectorAll("[data-gallery]").forEach((gallery) => {
   const track = gallery.querySelector(".gallery__track");
   const prev = gallery.querySelector(".gallery__nav--prev");
   const next = gallery.querySelector(".gallery__nav--next");
-  const scrollAmount = () => track.clientWidth * 0.85;
 
-  prev.addEventListener("click", () => {
-    track.scrollBy({ left: -scrollAmount(), behavior: "smooth" });
-  });
-  next.addEventListener("click", () => {
-    track.scrollBy({ left: scrollAmount(), behavior: "smooth" });
-  });
+  if (track && prev && next) {
+    const scrollAmount = () => track.clientWidth * 0.85;
+
+    prev.addEventListener("click", () => {
+      track.scrollBy({ left: -scrollAmount(), behavior: "smooth" });
+    });
+    next.addEventListener("click", () => {
+      track.scrollBy({ left: scrollAmount(), behavior: "smooth" });
+    });
+  }
 });
