@@ -105,7 +105,7 @@ h1,h2,h3{ font-family:var(--display); font-weight:400; letter-spacing:-.01em; }
   padding:clamp(4rem, 12vh, 4rem) 1.8rem 3rem;
 }
 .hero__logo{
-  width:clamp(194px, 24vw, 314px);
+  width:clamp(40px, 5vw, 65px);
   height:auto;
   display:block;
 }
