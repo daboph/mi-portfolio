@@ -93,19 +93,27 @@ h1,h2,h3{ font-family:var(--display); font-weight:400; letter-spacing:-.01em; }
 }
 
 /* ============================================
-   HERO
+   HERO (Sección compacta tipo banner con logo original)
    ============================================ */
-.hero{ position:relative; overflow:hidden; min-height:85vh; display:flex; align-items:center; justify-content:center; }
+.hero{ 
+  position:relative; 
+  overflow:hidden; 
+  min-height:45vh; 
+  height:45vh; 
+  display:flex; 
+  align-items:center; 
+  justify-content:center; 
+}
 .hero__ph{ position:absolute; inset:0; background:var(--bg-alt); }
 .hero__img-bg{ width:100%; height:100%; object-fit:cover; opacity:.4; }
 .hero__overlay{
   position:relative; z-index:2;
   display:flex; flex-direction:column; align-items:center; justify-content:center;
   text-align:center;
-  padding:clamp(4rem, 12vh, 4rem) 1.8rem 3rem;
+  padding:2rem 1.8rem;
 }
 .hero__logo{
-  width:clamp(40px, 5vw, 65px);
+  width:clamp(194px, 24vw, 314px);
   height:auto;
   display:block;
 }
@@ -115,9 +123,9 @@ h1,h2,h3{ font-family:var(--display); font-weight:400; letter-spacing:-.01em; }
   color:var(--ink-dim);
 }
 .hero__scroll{
-  position:absolute; bottom:2.25rem; left:50%; transform:translateX(-50%); z-index:2;
+  position:absolute; bottom:1.25rem; left:50%; transform:translateX(-50%); z-index:2;
 }
-.hero__scroll-line{ display:block; width:1px; height:2.75rem; background:var(--ink-dim); position:relative; overflow:hidden; }
+.hero__scroll-line{ display:block; width:1px; height:2rem; background:var(--ink-dim); position:relative; overflow:hidden; }
 .hero__scroll-line::after{
   content:""; position:absolute; top:-100%; left:0; width:100%; height:100%;
   background:var(--ink); animation:scrollpulse 2.4s ease-in-out infinite;
@@ -127,7 +135,7 @@ h1,h2,h3{ font-family:var(--display); font-weight:400; letter-spacing:-.01em; }
 /* ============================================
    PORTFOLIO CATEGORIES & GALLERIES
    ============================================ */
-main{ padding-top:clamp(2.5rem, 6vw, 4rem); }
+main{ padding-top:clamp(1.5rem, 4vw, 3rem); }
 
 .category{
   padding:2.25rem 0;
