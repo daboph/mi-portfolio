@@ -70,3 +70,36 @@ document.querySelectorAll("[data-gallery]").forEach((gallery) => {
     });
   }
 });
+
+// Lightbox Modal
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightboxImg");
+const lightboxClose = document.getElementById("lightboxClose");
+
+if (lightbox && lightboxImg) {
+  document.querySelectorAll(".gallery__item img").forEach((img) => {
+    img.addEventListener("click", () => {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add("is-open");
+      lightbox.setAttribute("aria-hidden", "false");
+    });
+  });
+
+  const closeModal = () => {
+    lightbox.classList.remove("is-open");
+    lightbox.setAttribute("aria-hidden", "true");
+  };
+
+  if (lightboxClose) lightboxClose.addEventListener("click", closeModal);
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) closeModal();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && lightbox.classList.contains("is-open")) {
+      closeModal();
+    }
+  });
+}
