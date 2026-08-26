@@ -189,6 +189,7 @@ main{ padding-top:clamp(1rem, 3vw, 2rem); }
 }
 .gallery__track::-webkit-scrollbar{ display:none; }
 
+/* Items para Fotos (5:7 Vertical) */
 .gallery__item{
   flex:0 0 auto !important;
   width:min(76vw, 360px) !important;
@@ -392,10 +393,12 @@ main{ padding-top:clamp(1rem, 3vw, 2rem); }
 }
 
 /* ============================================
-   VIDEO CARDS & LIGHTBOX IFRAME
+   VIDEO CARDS (FORMATO HORIZONTAL 16:9) & IFRAME
    ============================================ */
 .gallery__item--video {
   position: relative;
+  aspect-ratio: 16 / 9 !important;
+  width: min(85vw, 480px) !important;
 }
 
 .video-play-btn {
@@ -403,15 +406,15 @@ main{ padding-top:clamp(1rem, 3vw, 2rem); }
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 52px;
-  height: 52px;
+  width: 56px;
+  height: 56px;
   background: rgba(10, 10, 11, 0.85);
   border: 1px solid var(--line);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--ink);
   transition: transform .25s ease, background .25s ease, border-color .25s ease;
   pointer-events: none;
