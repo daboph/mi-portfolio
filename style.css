@@ -66,16 +66,20 @@ h1,h2,h3{ font-family:var(--display); font-weight:400; letter-spacing:-.01em; }
   border-bottom:1px solid var(--line);
 }
 
+/* Logo a la derecha: oculto al inicio, aparece al hacer scroll */
 .nav__mark{ 
-  display:none; 
+  display:flex; 
   align-items:center;
   opacity:0;
-  transition:opacity .3s ease;
+  visibility:hidden;
+  transition:opacity .3s ease, visibility .3s ease;
+  margin-left:auto; /* Empuja el logo siempre a la derecha */
+  order:2;
 }
 
 .nav__mark.is-visible{
-  display:flex;
   opacity:1;
+  visibility:visible;
 }
 
 .nav__mark-img{ height:28px; width:auto; display:block; }
@@ -85,10 +89,13 @@ h1,h2,h3{ font-family:var(--display); font-weight:400; letter-spacing:-.01em; }
 .nav__links a{ opacity:.8; transition:opacity .25s ease; }
 .nav__links a:hover{ opacity:1; }
 
+/* Las 3 rayas fijas a la izquierda */
 .nav__toggle{
   display:none; flex-direction:column; justify-content:space-between;
   width:24px; height:18px; padding:0; background:transparent; z-index:220;
-  margin-left:auto; /* Empuja las rayas siempre a la derecha */
+  margin-left:0;
+  margin-right:auto; /* Mantiene el icono fijo a la izquierda */
+  order:1;
 }
 .nav__toggle span{ width:100%; height:2px; background:var(--ink); transition:transform .3s ease, opacity .3s ease; }
 
