@@ -21,7 +21,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 2. Galería Scroll Horizontal con Botones
+  // 2. Mostrar/Ocultar Logo de la barra según Scroll en el Hero
+  const navMark = document.getElementById('navMark');
+  const hero = document.querySelector('.hero');
+
+  if (navMark && hero) {
+    const heroObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          navMark.classList.add('is-visible');
+        } else {
+          navMark.classList.remove('is-visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    heroObserver.observe(hero);
+  }
+
+  // 3. Galería Scroll Horizontal con Botones
   document.querySelectorAll('[data-gallery]').forEach(gallery => {
     const track = gallery.querySelector('.gallery__track');
     const prevBtn = gallery.querySelector('.gallery__nav--prev');
@@ -42,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 3. Lightbox Modal
+  // 4. Lightbox Modal
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightboxImg');
   const lightboxClose = document.getElementById('lightboxClose');
@@ -75,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. Animación Reveal de Categorías
+  // 5. Animación Reveal de Categorías
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -86,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.category').forEach(cat => observer.observe(cat));
 
-  // 5. Año Dinámico en Footer
+  // 6. Año Dinámico en Footer
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
