@@ -60,16 +60,43 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 4. Lightbox Modal
+  // 4. Lightbox Modal (Fotos + YouTube Video)
   const lightbox = document.getElementById('lightbox');
+  const lightboxContent = document.getElementById('lightboxContent');
   const lightboxImg = document.getElementById('lightboxImg');
   const lightboxClose = document.getElementById('lightboxClose');
 
-  if (lightbox && lightboxImg) {
-    document.querySelectorAll('.gallery__item img').forEach(img => {
-      img.addEventListener('click', () => {
-        lightboxImg.src = img.src;
-        lightboxImg.alt = img.alt || '';
+  if (lightbox && lightboxContent) {
+    document.querySelectorAll('.gallery__item').forEach(item => {
+      item.addEventListener('click', () => {
+        const videoId = item.getAttribute('data-video-id');
+        const img = item.querySelector('img');
+
+        if (videoId) {
+          // Si es un item de video, inyectamos el iframe de YouTube
+          lightboxImg.style.display = 'none';
+          
+          let iframe = lightboxContent.querySelector('.lightbox__iframe');
+          if (!iframe) {
+            iframe = document.createElement('iframe');
+            iframe.className = 'lightbox__iframe';
+            iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+            iframe.setAttribute('allowfullscreen', 'true');
+            lightboxContent.appendChild(iframe);
+          }
+          iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`;
+          iframe.style.display = 'block';
+
+        } else if (img) {
+          // Si es foto, mostramos la imagen normal
+          const iframe = lightboxContent.querySelector('.lightbox__iframe');
+          if (iframe) iframe.style.display = 'none';
+          
+          lightboxImg.src = img.src;
+          lightboxImg.alt = img.alt || '';
+          lightboxImg.style.display = 'block';
+        }
+
         lightbox.classList.add('is-open');
         lightbox.setAttribute('aria-hidden', 'false');
       });
@@ -78,6 +105,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeLightbox = () => {
       lightbox.classList.remove('is-open');
       lightbox.setAttribute('aria-hidden', 'true');
+      
+      // Detener la reproducción del video al cerrar cortando la URL del iframe
+      const iframe = lightboxContent.querySelector('.lightbox__iframe');
+      if (iframe) {
+        iframe.src = '';
+        iframe.style.display = 'none';
+      }
     };
 
     if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
